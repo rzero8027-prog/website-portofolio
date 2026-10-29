@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daffa Fairuz Syifaur Anam - Portofolio</title>
+    <!-- Tailwind CSS CDN untuk styling yang cepat dan modern -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0a0a0a',
+                        cardBg: '#141414',
+                        cardHover: '#1f1f1f',
+                        accent: '#3b82f6'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-darkBg text-gray-100 font-sans antialiased selection:bg-blue-500 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-darkBg/80 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 bg-cardBg border border-gray-800 px-4 py-2 rounded-full hover:border-gray-600 transition">
+                <span class="w-7 h-7 bg-white text-darkBg font-bold rounded-full flex items-center justify-center text-xs">DF</span>
+                <span class="font-semibold text-sm tracking-wide">DAFFA FAIRUZ</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
+                <a href="#work" class="hover:text-white transition">Work</a>
+                <a href="#capabilities" class="hover:text-white transition">What I Can Do</a>
+                <a href="#achievement" class="hover:text-white transition">Achievement</a>
+                <a href="#about" class="hover:text-white transition">About</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a href="#contact" class="bg-white text-darkBg hover:bg-gray-200 font-medium text-sm px-5 py-2.5 rounded-full transition">
+                    Hire Me
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto px-6 pt-32 pb-20 space-y-32">
+
+        <!-- Hero Section -->
+        <section class="flex flex-col items-center text-center space-y-8 pt-10">
+            <!-- Foto Profil Placeholder (Sesuaikan path gambar jika ada foto lokal) -->
+            <div class="w-full max-w-2xl h-[400px] bg-cardBg border border-gray-800 rounded-3xl overflow-hidden shadow-2xl flex items-center justify-center relative group">
+                <!-- Ganti tag img di bawah dengan file fotomu, misal src="foto.jpg" -->
+                <div class="absolute inset-0 bg-gradient-to-t from-darkBg via-transparent to-transparent opacity-60 z-10"></div>
+                <div class="flex flex-col items-center justify-center text-gray-500 space-y-2 z-0">
+                    <i class="fa-solid fa-user-tie text-6xl text-gray-600"></i>
+                    <p class="text-sm">Daffa Fairuz Syifaur Anam</p>
+                </div>
+            </div>
+            
+            <div class="inline-flex items-center gap-2 bg-cardBg border border-gray-800 px-4 py-2 rounded-full text-xs text-gray-400">
+                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                Mahasiswa Teknik Informatika Unesa 2026[cite: 6]
+            </div>
+        </section>
+
+        <!-- Work Gallery Section -->
+        <section id="work" class="space-y-8">
+            <div>
+                <p class="text-xs font-semibold tracking-widest text-gray-500 uppercase mb-2">SELECTED WORK</p>
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Work Gallery</h2>
+                <p class="text-gray-400 mt-2">Kumpulan pengalaman organisasi, kepemimpinan, dan proyek profesional yang pernah dikerjakan.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Project 1 -->
+                <div class="bg-cardBg border border-gray-800 p-6 rounded-2xl hover:border-gray-700 transition space-y-4">
+                    <div class="h-40 bg-gray-900 rounded-xl flex items-center justify-center border border-gray-800 text-gray-600">
+                        <i class="fa-solid fa-users-rectangle text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold">Ketua OSIS SMA Negeri 1 Rejoso</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Memimpin Angkatan 27 OSIS Periode 2024/2025 serta bertanggung jawab sebagai Ketua Pelaksana Kegiatan PHBN Tahun 2024[cite: 6].</p>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-cardBg border border-gray-800 p-6 rounded-2xl hover:border-gray-700 transition space-y-4">
+                    <div class="h-40 bg-gray-900 rounded-xl flex items-center justify-center border border-gray-800 text-gray-600">
+                        <i class="fa-solid fa-hotel text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold">Hospitality Staff - Exotic Gaming & Eatery</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Berpengalaman menangani operasional langsung sebagai Kasir, Waiters, Barista, dan Chef dengan standar pelayanan tinggi[cite: 6].</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- What I Can Do Section -->
+        <section id="capabilities" class="space-y-8">
+            <div>
+                <p class="text-xs font-semibold tracking-widest text-gray-500 uppercase mb-2">MY CAPABILITIES</p>
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight">What I Can Do</h2>
+                <p class="text-gray-400 mt-2">Menggabungkan kemampuan teknis informatika, manajemen organisasi, kepemimpinan, dan pelayanan profesional.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Kategori 1 -->
+                <div class="bg-cardBg border border-gray-800 p-8 rounded-2xl space-y-6">
+                    <div class="w-12 h-12 rounded-xl bg-gray-900 border border-gray-800 flex items-center justify-center text-blue-400 text-xl font-bold">
+                        01
+                    </div>
+                    <h3 class="text-xl font-semibold">Leadership & Event Management</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Berpengalaman luas dalam memimpin organisasi tingkat sekolah dan kabupaten, mengelola aspirasi publik, serta merancang berjalannya acara berskala besar.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="bg-gray-900 border border-gray-800 text-xs px-3 py-1.5 rounded-lg text-gray-300">Leadership</span>
+                        <span class="bg-gray-900 border border-gray-800 text-xs px-3 py-1.5 rounded-lg text-gray-300">Public Speaking</span>
+                        <span class="bg-gray-900 border border-gray-800 text-xs px-3 py-1.5 rounded-lg text-gray-300">Event Management</span>
+                        <span class="bg-gray-900 border border-gray-800 text-xs px-3 py-1.5 rounded-lg text-gray-300">Teamwork</span>
+                    </div>
+                </div>
+
+                <!-- Kategori 2 -->
+                <div class="bg-cardBg border border-gray-800 p-8 rounded-2xl space-y-6">
+                    <div class="w-12 h-12 rounded-xl bg-gray-900 border border-gray-800 flex items-center justify-center text-blue-400 text-xl font-bold">
+                        02
+                    </div>
+                    <h3 class="text-xl font-semibold">Technical & Creative Skills</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Menguasai dasar pemrograman, pengolahan dokumen perkantoran, serta pembuatan konten digital kreatif dan fotografi.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="bg-gray-900 border border-gray-800 text-xs px-3 py-1.5 rounded-lg text-gray-300">Basic Programming</span>
+                        <span class="bg-gray-900 border border-gray-800 text-xs px-3 py-1.5 rounded-lg text-gray-300">Video Editing</span>
+                        <span class="bg-gray-900 border border-gray-800 text-xs px-3 py-1.5 rounded-lg text-gray-300">Microsoft Office</span>
+                        <span class="bg-gray-900 border border-gray-800 text-xs px-3 py-1.5 rounded-lg text-gray-300">Photography</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievement Section -->
+        <section id="achievement" class="space-y-8">
+            <div>
+                <p class="text-xs font-semibold tracking-widest text-gray-500 uppercase mb-2">TRACK RECORD</p>
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Achievement</h2>
+                <p class="text-gray-400 mt-2">Pencapaian akademik dan non-akademik yang pernah diraih.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- Item Achievement 1 -->
+                <div class="bg-cardBg border border-gray-800 p-6 rounded-2xl flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <span class="text-xs font-medium text-blue-400 bg-blue-950/40 border border-blue-900/50 px-2.5 py-1 rounded-md">2026</span>
+                        <h3 class="text-lg font-semibold mt-2">Penerima Beasiswa Asrama Mahasiswa Nusantara (AMN)</h3>
+                        <p class="text-gray-400 text-sm mt-1">Beasiswa Pendidikan Indonesia (BPI) oleh LPDP.</p>
+                    </div>
+                </div>
+                <!-- Item Achievement 2 -->
+                <div class="bg-cardBg border border-gray-800 p-6 rounded-2xl flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <span class="text-xs font-medium text-blue-400 bg-blue-950/40 border border-blue-900/50 px-2.5 py-1 rounded-md">2025</span>
+                        <h3 class="text-lg font-semibold mt-2">Video Promosi Terkreatif</h3>
+                        <p class="text-gray-400 text-sm mt-1">Show Your Frame Berani II Peringatan Hari Anak Nasional Provinsi Jawa Timur[cite: 6].</p>
+                    </div>
+                </div>
+                <!-- Item Achievement 3 -->
+                <div class="bg-cardBg border border-gray-800 p-6 rounded-2xl flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <span class="text-xs font-medium text-blue-400 bg-blue-950/40 border border-blue-900/50 px-2.5 py-1 rounded-md">2025</span>
+                        <h3 class="text-lg font-semibold mt-2">Peserta Olimpiade Sains Nasional Kabupaten - Bidang Kimia</h3>
+                        <p class="text-gray-400 text-sm mt-1">Kabupaten Nganjuk[cite: 6].</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="space-y-8 bg-cardBg border border-gray-800 p-8 md:p-12 rounded-3xl">
+            <div class="space-y-2">
+                <p class="text-xs font-semibold tracking-widest text-gray-500 uppercase">ABOUT ME</p>
+                <h2 class="text-3xl font-bold tracking-tight">Leader. Problem Solver. Technologist.</h2>
+            </div>
+
+            <!-- Statistik singkat -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 py-4 border-y border-gray-800">
+                <div>
+                    <div class="text-2xl font-bold text-white">2026</div>
+                    <div class="text-xs text-gray-400 mt-1">Mahasiswa Baru Unesa</div>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold text-white">OSIS</div>
+                    <div class="text-xs text-gray-400 mt-1">Mantan Ketua OSIS</div>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold text-white">AMN</div>
+                    <div class="text-xs text-gray-400 mt-1">Awardee LPDP</div>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold text-white">Informatika</div>
+                    <div class="text-xs text-gray-400 mt-1">Program Studi</div>
+                </div>
+            </div>
+
+            <div class="text-gray-300 text-sm leading-relaxed space-y-4">
+                <p>
+                    Halo! Saya <strong>Daffa Fairuz Syifaur Anam</strong> (NIM: <strong>26051204033</strong>), seorang mahasiswa Program Studi Teknik Informatika, Fakultas Teknik, Universitas Negeri Surabaya Angkatan 2026[cite: 6]. 
+                </p>
+                <p>
+                    Saya adalah individu yang aktif dalam organisasi dan kepemimpinan, adaptif, serta mampu bekerja sama dalam tim dengan sangat baik[cite: 6]. Memiliki rekam jejak dalam memimpin organisasi (Ketua OSIS SMA Negeri 1 Rejoso, Koordinator Departemen Keagamaan HIMO Kabupaten Nganjuk, hingga pengurus FANTASI) serta pengalaman profesional di bidang *hospitality* yang membentuk karakter ramah, berempati, dan tahan di bawah tekanan[cite: 6].
+                </p>
+            </div>
+
+            <div class="pt-2">
+                <a href="#contact" class="inline-flex items-center gap-2 text-sm font-semibold text-blue-400 hover:text-blue-300 transition">
+                    Download CV & Hubungi Saya <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="space-y-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-cardBg border border-gray-800 p-8 md:p-12 rounded-3xl">
+                <div class="space-y-6">
+                    <div>
+                        <p class="text-xs font-semibold tracking-widest text-gray-500 uppercase mb-2">GET IN TOUCH</p>
+                        <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Let's Work Together</h2>
+                        <p class="text-gray-400 text-sm mt-3 leading-relaxed">
+                            Terbuka untuk kesempatan berkolaborasi, diskusi proyek teknologi, kegiatan organisasi, maupun peluang pengembangan karier di masa depan.
+                        </p>
+                    </div>
+                    <a href="mailto:daffa.fairuzz2008@gmail.com" class="inline-block bg-white text-darkBg hover:bg-gray-200 font-medium text-sm px-6 py-3 rounded-full transition">
+                        Send Me A Message
+                    </a>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="bg-gray-900/50 border border-gray-800 p-4 rounded-xl flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-gray-500 uppercase tracking-wider block">EMAIL</span>
+                            <span class="text-sm font-medium text-gray-200">daffa.fairuzz2008@gmail.com</span>
+                        </div>
+                        <i class="fa-solid fa-envelope text-gray-500"></i>
+                    </div>
+
+                    <div class="bg-gray-900/50 border border-gray-800 p-4 rounded-xl flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-gray-500 uppercase tracking-wider block">WHATSAPP</span>
+                            <span class="text-sm font-medium text-gray-200">+62 881 0361 76052</span>
+                        </div>
+                        <i class="fa-brands fa-whatsapp text-gray-500"></i>
+                    </div>
+
+                    <div class="bg-gray-900/50 border border-gray-800 p-4 rounded-xl flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-gray-500 uppercase tracking-wider block">LINKEDIN</span>
+                            <span class="text-sm font-medium text-gray-200">linkedin.com/in/daffa-fairuz-syifaur-anam-815211434</span>
+                        </div>
+                        <i class="fa-brands fa-linkedin text-gray-500"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800 py-8 text-center text-xs text-gray-500">
+        <p>&copy; 2026 Daffa Fairuz Syifaur Anam. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

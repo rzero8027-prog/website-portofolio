@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daffa Fairuz Syifaur Anam - Portofolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#0284c7',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            900: '#0c4a6e',
+                        },
+                        accent: {
+                            blue: '#38bdf8',
+                            emerald: '#34d399',
+                            amber: '#fbbf24',
+                            purple: '#c084fc'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-nav {
+            background: rgba(10, 15, 30, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glow-effect {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(90px);
+            opacity: 0.15;
+            pointer-events: none;
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .text-gold {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-sky-500 selection:text-white relative overflow-x-hidden">
+
+    <!-- Ambient Glow Backgrounds -->
+    <div class="glow-effect w-[500px] h-[500px] bg-sky-500 top-0 -left-48"></div>
+    <div class="glow-effect w-[600px] h-[600px] bg-purple-600 top-1/3 -right-48"></div>
+    <div class="glow-effect w-[500px] h-[500px] bg-emerald-500 bottom-10 left-1/3"></div>
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="font-heading font-bold text-xl sm:text-2xl text-white tracking-tight flex items-center gap-2">
+                <span class="w-9 h-9 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center text-white text-lg font-extrabold shadow-lg shadow-sky-500/20">D</span>
+                <span>Daffa<span class="text-sky-400">.Fairuz</span></span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 text-sm font-medium text-slate-300">
+                <a href="#tentang" class="px-3 py-2 rounded-lg hover:text-white hover:bg-slate-800/60 transition">Tentang</a>
+                <a href="#pendidikan" class="px-3 py-2 rounded-lg hover:text-white hover:bg-slate-800/60 transition">Pendidikan</a>
+                <a href="#pengalaman" class="px-3 py-2 rounded-lg hover:text-white hover:bg-slate-800/60 transition">Pengalaman</a>
+                <a href="#prestasi" class="px-3 py-2 rounded-lg hover:text-white hover:bg-slate-800/60 transition">Prestasi</a>
+                <a href="#keterampilan" class="px-3 py-2 rounded-lg hover:text-white hover:bg-slate-800/60 transition">Keterampilan</a>
+            </nav>
+
+            <a href="#kontak" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold text-sm transition shadow-lg shadow-sky-500/25">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+                <span>Hubungi Saya</span>
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg bg-slate-800/80 text-slate-300 hover:text-white">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden border-b border-slate-800 bg-slate-900/95 px-4 pt-2 pb-6 space-y-3">
+            <a href="#tentang" class="mobile-nav-link block px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">Tentang</a>
+            <a href="#pendidikan" class="mobile-nav-link block px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">Pendidikan</a>
+            <a href="#pengalaman" class="mobile-nav-link block px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">Pengalaman</a>
+            <a href="#prestasi" class="mobile-nav-link block px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">Prestasi</a>
+            <a href="#keterampilan" class="mobile-nav-link block px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">Keterampilan</a>
+            <a href="#kontak" class="mobile-nav-link block w-full text-center px-4 py-2.5 rounded-xl bg-sky-500 text-slate-950 font-semibold">Hubungi Saya</a>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-36 space-y-24 sm:space-y-32">
+
+        <!-- Hero Section -->
+        <section id="tentang" class="min-h-[80vh] flex flex-col justify-center">
+            <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                <!-- Text Area -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-card border border-sky-500/30 text-sky-400 text-xs sm:text-sm font-medium">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        Mahasiswa Teknik Informatika @ Unesa '26
+                    </div>
+
+                    <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                        Halo, Saya <br class="hidden sm:block"/>
+                        <span class="text-gradient">Daffa Fairuz Syifaur Anam</span>
+                    </h1>
+
+                    <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+                        Mahasiswa Teknik Informatika Universitas Negeri Surabaya yang aktif dalam bidang organisasi, kepemimpinan, adaptif, serta berpengalaman di bidang <span class="text-sky-300 font-medium">hospitality</span> & <span class="text-sky-300 font-medium">manajemen acara</span>. Berkomitmen menciptakan dampak positif melalui kolaborasi dan teknologi.
+                    </p>
+
+                    <!-- Contact Badge Badges & Quick Stats -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs sm:text-sm text-slate-300">
+                        <div class="flex items-center gap-2.5 p-2.5 rounded-xl glass-card">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-sky-400 flex-shrink-0"></i>
+                            <span class="truncate">Kab. Nganjuk, Jawa Timur</span>
+                        </div>
+                        <a href="https://wa.me/62881036176052" target="_blank" class="flex items-center gap-2.5 p-2.5 rounded-xl glass-card hover:border-emerald-500/50 hover:text-emerald-300 transition group">
+                            <i data-lucide="phone" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                            <span class="truncate">+62 881 0361 76052</span>
+                        </a>
+                        <a href="mailto:daffa.fairuzz2008@gmail.com" class="flex items-center gap-2.5 p-2.5 rounded-xl glass-card hover:border-sky-500/50 hover:text-sky-300 transition group">
+                            <i data-lucide="mail" class="w-4 h-4 text-sky-400 flex-shrink-0"></i>
+                            <span class="truncate">daffa.fairuzz2008@gmail.com</span>
+                        </a>
+                        <a href="https://instagram.com/daffa_fairuzzz" target="_blank" class="flex items-center gap-2.5 p-2.5 rounded-xl glass-card hover:border-purple-500/50 hover:text-purple-300 transition group">
+                            <i data-lucide="instagram" class="w-4 h-4 text-purple-400 flex-shrink-0"></i>
+                            <span class="truncate">@daffa_fairuzzz</span>
+                        </a>
+                    </div>
+
+                    <!-- Call To Action Buttons -->
+                    <div class="flex flex-wrap items-center gap-4 pt-4">
+                        <a href="#kontak" class="px-6 py-3.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-sm sm:text-base transition shadow-lg shadow-sky-500/25 flex items-center gap-2">
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                            <span>Kontak Saya</span>
+                        </a>
+                        <a href="#pengalaman" class="px-6 py-3.5 rounded-xl glass-card hover:bg-slate-800/80 text-white font-semibold text-sm sm:text-base transition border border-slate-700/60 flex items-center gap-2">
+                            <i data-lucide="briefcase" class="w-4 h-4 text-sky-400"></i>
+                            <span>Lihat Pengalaman</span>
+                        </a>
+                        <button onclick="copyToClipboard('daffa.fairuzz2008@gmail.com', 'Email berhasil disalin!')" class="p-3.5 rounded-xl glass-card hover:bg-slate-800 text-slate-300 hover:text-white transition border border-slate-700/60" title="Salin Email">
+                            <i data-lucide="copy" class="w-5 h-5"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Avatar / Card Showcase -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-sm">
+                        <!-- Background Frame Decoration -->
+                        <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-sky-500 to-indigo-600 blur-lg opacity-40"></div>
+                        <div class="relative glass-card p-6 sm:p-8 rounded-3xl space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center font-heading font-extrabold text-white text-3xl shadow-xl shadow-sky-500/30">
+                                    DF
+                                </div>
+                                <div>
+                                    <h3 class="font-heading font-bold text-lg text-white">Daffa Fairuz S. A.</h3>
+                                    <p class="text-xs text-sky-400 font-medium">Teknik Informatika '26</p>
+                                    <p class="text-xs text-slate-400">Universitas Negeri Surabaya</p>
+                                </div>
+                            </div>
+
+                            <div class="border-t border-slate-800 pt-4 space-y-3 text-xs">
+                                <div class="flex items-center justify-between text-slate-300">
+                                    <span class="flex items-center gap-2"><i data-lucide="award" class="w-4 h-4 text-amber-400"></i> Status Beasiswa</span>
+                                    <span class="text-amber-400 font-semibold">AMN - BPI LPDP</span>
+                                </div>
+                                <div class="flex items-center justify-between text-slate-300">
+                                    <span class="flex items-center gap-2"><i data-lucide="users" class="w-4 h-4 text-sky-400"></i> Keorganisasian</span>
+                                    <span class="text-slate-200">Ex-Ketua OSIS</span>
+                                </div>
+                                <div class="flex items-center justify-between text-slate-300">
+                                    <span class="flex items-center gap-2"><i data-lucide="coffee" class="w-4 h-4 text-emerald-400"></i> Pengalaman</span>
+                                    <span class="text-slate-200">Hospitality Staff</span>
+                                </div>
+                            </div>
+
+                            <div class="p-3.5 rounded-2xl bg-sky-950/40 border border-sky-500/20 text-xs text-sky-300 flex items-start gap-2.5">
+                                <i data-lucide="sparkles" class="w-4 h-4 flex-shrink-0 mt-0.5 text-sky-400"></i>
+                                <span>"Tahan di bawah tekanan, komunikatif, berempati tinggi, dan siap berkontribusi penuh."</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pendidikan Timeline Section -->
+        <section id="pendidikan" class="space-y-10">
+            <div class="text-center space-y-3">
+                <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">
+                    Riwayat <span class="text-gradient">Pendidikan</span>
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
+                    Jejak langkah pendidikan formal yang membentuk fondasi akademis dan karakter kepemimpinan.
+                </p>
+            </div>
+
+            <div class="relative max-w-3xl mx-auto pl-6 sm:pl-8 border-l-2 border-slate-800 space-y-8">
+                <!-- item 1 -->
+                <div class="relative group">
+                    <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-sky-500 border-4 border-slate-950 group-hover:scale-125 transition"></div>
+                    <div class="glass-card p-5 sm:p-6 rounded-2xl space-y-2 hover:border-sky-500/40 transition">
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                            <h3 class="font-heading font-bold text-lg sm:text-xl text-white">Universitas Negeri Surabaya (UNESA)</h3>
+                            <span class="px-2.5 py-1 rounded-full bg-sky-500/10 text-sky-400 text-xs font-semibold">2026 - Sekarang</span>
+                        </div>
+                        <p class="text-sm font-medium text-sky-300">Program Studi S1 Teknik Informatika - Fakultas Teknik</p>
+                        <p class="text-xs sm:text-sm text-slate-300 flex items-center gap-2 pt-1">
+                            <i data-lucide="award" class="w-4 h-4 text-amber-400 flex-shrink-0"></i>
+                            Penerima Beasiswa Asrama Mahasiswa Nusantara (AMN) - Beasiswa Pendidikan Indonesia (BPI) oleh LPDP.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- item 2 -->
+                <div class="relative group">
+                    <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-slate-700 border-4 border-slate-950 group-hover:bg-sky-400 transition"></div>
+                    <div class="glass-card p-5 sm:p-6 rounded-2xl space-y-2 hover:border-slate-700 transition">
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                            <h3 class="font-heading font-bold text-lg text-white">SMA Negeri 1 Rejoso</h3>
+                            <span class="px-2.5 py-1 rounded-full bg-slate-800 text-slate-400 text-xs font-semibold">2023 - 2026</span>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-300">Aktif memimpin organisasi kesiswaan sekolah dan berbagai kepanitiaan kegiatan besar acara sekolah.</p>
+                    </div>
+                </div>
+
+                <!-- item 3 -->
+                <div class="relative group">
+                    <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-slate-800 border-4 border-slate-950"></div>
+                    <div class="glass-card p-5 sm:p-6 rounded-2xl space-y-2">
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                            <h3 class="font-heading font-bold text-base sm:text-lg text-slate-200">SMP Negeri 1 Wilangan</h3>
+                            <span class="px-2.5 py-1 rounded-full bg-slate-800 text-slate-400 text-xs font-semibold">2020 - 2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- item 4 -->
+                <div class="relative group">
+                    <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-slate-800 border-4 border-slate-950"></div>
+                    <div class="glass-card p-5 sm:p-6 rounded-2xl space-y-2">
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                            <h3 class="font-heading font-bold text-base sm:text-lg text-slate-300">SD Negeri 1 Mancon & TK Pertiwi 1 Mancon</h3>
+                            <span class="px-2.5 py-1 rounded-full bg-slate-800 text-slate-400 text-xs font-semibold">2012 - 2020</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pengalaman Organisasi & Profesional -->
+        <section id="pengalaman" class="space-y-10">
+            <div class="text-center space-y-3">
+                <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">
+                    Pengalaman <span class="text-gradient">Kerja & Organisasi</span>
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
+                    Rekam jejak kepemimpinan, kontribusi sosial, serta keterampilan profesional di dunia kerja nyata.
+                </p>
+            </div>
+
+            <!-- Interactive Filter Buttons -->
+            <div class="flex justify-center gap-2 sm:gap-4 font-medium text-sm">
+                <button onclick="filterExperience('all')" id="filter-all" class="exp-filter-btn px-4 py-2 rounded-xl bg-sky-500 text-slate-950 font-semibold transition">Semua</button>
+                <button onclick="filterExperience('organisasi')" id="filter-organisasi" class="exp-filter-btn px-4 py-2 rounded-xl glass-card text-slate-300 hover:text-white transition">Organisasi</button>
+                <button onclick="filterExperience('profesional')" id="filter-profesional" class="exp-filter-btn px-4 py-2 rounded-xl glass-card text-slate-300 hover:text-white transition">Profesional</button>
+            </div>
+
+            <!-- Experience Cards Container -->
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- OSIS -->
+                <div class="exp-card item-organisasi glass-card p-6 rounded-2xl space-y-4 hover:border-sky-500/40 transition">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <span class="text-xs font-semibold uppercase tracking-wider text-sky-400">Organisasi Sekolah</span>
+                            <h3 class="font-heading font-bold text-xl text-white mt-1">OSIS Laskar Wings SMAN 1 Rejoso</h3>
+                        </div>
+                        <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium">2023 - 2025</span>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside">
+                        <li><strong class="text-white">Ketua OSIS Angkatan 27</strong> (Periode 2024/2025) — Memimpin jalannya organisasi dan koordinasi program kerja seluruh seksi bidang.</li>
+                        <li><strong class="text-white">Ketua Pelaksana PHBN 2024</strong> — Bertanggung jawab penuh atas keberhasilan perayaan Hari Besar Nasional.</li>
+                        <li>Anggota Sekbid 1 Kerohanian (Periode 2023/2024).</li>
+                    </ul>
+                </div>
+
+                <!-- HIMO -->
+                <div class="exp-card item-organisasi glass-card p-6 rounded-2xl space-y-4 hover:border-sky-500/40 transition">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <span class="text-xs font-semibold uppercase tracking-wider text-indigo-400">Organisasi Daerah</span>
+                            <h3 class="font-heading font-bold text-xl text-white mt-1">HIMO Kab. Nganjuk</h3>
+                            <p class="text-xs text-slate-400">Himpunan Musyawarah OSIS Kabupaten Nganjuk</p>
+                        </div>
+                        <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium">2025</span>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside">
+                        <li><strong class="text-white">Ketua Koordinator Departemen Keagamaan</strong> — Merancang dan mengarahkan kegiatan keagamaan lintas sekolah se-kabupaten.</li>
+                        <li> Operator Komputer & Layar Display pada kegiatan utama daerah.</li>
+                    </ul>
+                </div>
+
+                <!-- FANTASI -->
+                <div class="exp-card item-organisasi glass-card p-6 rounded-2xl space-y-4 hover:border-sky-500/40 transition">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <span class="text-xs font-semibold uppercase tracking-wider text-purple-400">Aspirasi Publik</span>
+                            <h3 class="font-heading font-bold text-xl text-white mt-1">FANTASI Kab. Nganjuk</h3>
+                            <p class="text-xs text-slate-400">Forum Anak Nganjuk Jembatan Aspirasi</p>
+                        </div>
+                        <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium">2025</span>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside">
+                        <li><strong class="text-white">Wakil Ketua Pelaksana</strong> Acara "Sehari Menjadi DPR Deklarasi 6".</li>
+                        <li> Anggota Divisi Keranjang Aspirasi — Mengelola dan menyalurkan suara aspirasi anak-anak Nganjuk.</li>
+                    </ul>
+                </div>
+
+                <!-- Exotic Gaming & Eatery -->
+                <div class="exp-card item-profesional glass-card p-6 rounded-2xl space-y-4 border-emerald-500/30 hover:border-emerald-500/60 transition">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Pengalaman Kerja Profesional</span>
+                            <h3 class="font-heading font-bold text-xl text-white mt-1">Exotic Gaming & Eatery</h3>
+                        </div>
+                        <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 text-xs font-medium">Apr 2026 - Jul 2026</span>
+                    </div>
+                    <p class="text-sm font-semibold text-slate-200">Hospitality Staff Multi-role:</p>
+                    <div class="grid grid-cols-2 gap-2 text-xs text-slate-300">
+                        <div class="p-2 rounded-lg bg-slate-800/60 flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Kasir</div>
+                        <div class="p-2 rounded-lg bg-slate-800/60 flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Waiters</div>
+                        <div class="p-2 rounded-lg bg-slate-800/60 flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Barista</div>
+                        <div class="p-2 rounded-lg bg-slate-800/60 flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Chef Helper</div>
+                    </div>
+                    <p class="text-xs text-slate-400 pt-1">
+                        Membentuk karakter yang ramah, berempati tinggi, dan terbiasa bekerja secara efektif di bawah tekanan pelanggan.
+                    </p>
+                </div>
+
+                <!-- VOXERA & Buku Angkatan -->
+                <div class="exp-card item-organisasi glass-card p-6 rounded-2xl space-y-4 hover:border-sky-500/40 transition md:col-span-2">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <span class="text-xs font-semibold uppercase tracking-wider text-sky-400">Kepemimpinan Angkatan</span>
+                            <h3 class="font-heading font-bold text-xl text-white mt-1">VOXERA XXVI & Buku Angkatan 26</h3>
+                        </div>
+                        <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium">2026</span>
+                    </div>
+                    <div class="grid sm:grid-cols-2 gap-4 text-sm text-slate-300">
+                        <div class="p-3.5 rounded-xl bg-slate-800/40 border border-slate-700/50">
+                            <h4 class="font-semibold text-white mb-1">Ketua Angkatan VOXERA XXVI</h4>
+                            <p class="text-xs text-slate-400">Sukses mengkoordinasi dan menggelar Acara Farewell Party VOXERA XXVI SMA Negeri 1 Rejoso.</p>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-slate-800/40 border border-slate-700/50">
+                            <h4 class="font-semibold text-white mb-1">Koordinator Buku Angkatan 26</h4>
+                            <p class="text-xs text-slate-400">Bertanggung jawab dalam penyusunan, pengumpulan data, dan penerbitan album kenangan angkatan sekolah.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prestasi & Penghargaan -->
+        <section id="prestasi" class="space-y-10">
+            <div class="text-center space-y-3">
+                <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">
+                    Prestasi & <span class="text-gold">Penghargaan</span>
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
+                    Pencapaian akademik dan non-akademik yang telah diraih.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Achievement 1 -->
+                <div class="glass-card p-6 rounded-2xl space-y-3 relative overflow-hidden group hover:border-amber-500/50 transition">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold text-xl">
+                        <i data-lucide="award" class="w-6 h-6"></i>
+                    </div>
+                    <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-300 tracking-wider uppercase">Beasiswa Nasional</span>
+                    <h3 class="font-heading font-bold text-lg text-white">Beasiswa AMN - BPI LPDP</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Penerima Beasiswa Asrama Mahasiswa Nusantara (AMN) - Beasiswa Pendidikan Indonesia oleh LPDP Kemenkeu RI.
+                    </p>
+                </div>
+
+                <!-- Achievement 2 -->
+                <div class="glass-card p-6 rounded-2xl space-y-3 relative overflow-hidden group hover:border-sky-500/50 transition">
+                    <div class="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center font-bold text-xl">
+                        <i data-lucide="video" class="w-6 h-6"></i>
+                    </div>
+                    <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-sky-500/20 text-sky-300 tracking-wider uppercase">Provinsi Jawa Timur</span>
+                    <h3 class="font-heading font-bold text-lg text-white">Video Promosi Terkreatif</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Pemenang kategori Video Promosi Terkreatif "Show Your Frame Berani II" Peringatan Hari Anak Nasional 2025 Prov. Jatim.
+                    </p>
+                </div>
+
+                <!-- Achievement 3 -->
+                <div class="glass-card p-6 rounded-2xl space-y-3 relative overflow-hidden group hover:border-purple-500/50 transition">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center font-bold text-xl">
+                        <i data-lucide="sparkles" class="w-6 h-6"></i>
+                    </div>
+                    <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-purple-500/20 text-purple-300 tracking-wider uppercase">Penampilan Seni</span>
+                    <h3 class="font-heading font-bold text-lg text-white">Penampilan Terbaik Inagurasi</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Meraih Penampilan Terbaik pada Inagurasi Orientasi Asrama Mahasiswa Nusantara (AMN) Surabaya Tahun 2026.
+                    </p>
+                </div>
+
+                <!-- Achievement 4 -->
+                <div class="glass-card p-6 rounded-2xl space-y-3 relative overflow-hidden group hover:border-emerald-500/50 transition">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-xl">
+                        <i data-lucide="flask-conical" class="w-6 h-6"></i>
+                    </div>
+                    <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-300 tracking-wider uppercase">Sains / Akademik</span>
+                    <h3 class="font-heading font-bold text-lg text-white">Peserta OSN Kabupaten Kimia</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Peserta Olimpiade Sains Nasional Tingkat Kabupaten (OSN-K) Bidang Kimia Tahun 2025 Kab. Nganjuk.
+                    </p>
+                </div>
+
+                <!-- Achievement 5 -->
+                <div class="glass-card p-6 rounded-2xl space-y-3 relative overflow-hidden group hover:border-rose-500/50 transition sm:col-span-2 lg:col-span-2">
+                    <div class="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-400 flex items-center justify-center font-bold text-xl">
+                        <i data-lucide="clapperboard" class="w-6 h-6"></i>
+                    </div>
+                    <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-rose-500/20 text-rose-300 tracking-wider uppercase">Seni Peran</span>
+                    <h3 class="font-heading font-bold text-lg text-white">Pemeran Utama Sendratasik 2026</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Terpilih sebagai pemeran utama dalam pagelaran ujian praktik Sendratasik SMA Negeri 1 Rejoso Nganjuk Tahun 2026.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Keterampilan & Minat -->
+        <section id="keterampilan" class="space-y-10">
+            <div class="text-center space-y-3">
+                <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">
+                    Keterampilan & <span class="text-gradient">Minat</span>
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
+                    Perpaduan antara Softskills interpersonal dan Hardskills teknis digital.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Soft Skills -->
+                <div class="glass-card p-6 sm:p-8 rounded-3xl space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="p-3 rounded-xl bg-sky-500/10 text-sky-400">
+                            <i data-lucide="users-round" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-white">Soft Skills</h3>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-sm font-medium mb-1.5">
+                                <span class="text-slate-200">Leadership & Kepemimpinan</span>
+                                <span class="text-sky-400">95%</span>
+                            </div>
+                            <div class="w-full bg-slate-800 rounded-full h-2.5">
+                                <div class="bg-sky-500 h-2.5 rounded-full w-[95%]"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-sm font-medium mb-1.5">
+                                <span class="text-slate-200">Public Speaking & Komunikasi</span>
+                                <span class="text-sky-400">90%</span>
+                            </div>
+                            <div class="w-full bg-slate-800 rounded-full h-2.5">
+                                <div class="bg-sky-500 h-2.5 rounded-full w-[90%]"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-sm font-medium mb-1.5">
+                                <span class="text-slate-200">Customer Service & Hospitality</span>
+                                <span class="text-sky-400">88%</span>
+                            </div>
+                            <div class="w-full bg-slate-800 rounded-full h-2.5">
+                                <div class="bg-sky-500 h-2.5 rounded-full w-[88%]"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-sm font-medium mb-1.5">
+                                <span class="text-slate-200">Event & Operations Management</span>
+                                <span class="text-sky-400">92%</span>
+                            </div>
+                            <div class="w-full bg-slate-800 rounded-full h-2.5">
+                                <div class="bg-sky-500 h-2.5 rounded-full w-[92%]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hard Skills -->
+                <div class="glass-card p-6 sm:p-8 rounded-3xl space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="p-3 rounded-xl bg-purple-500/10 text-purple-400">
+                            <i data-lucide="code-2" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-white">Hard Skills</h3>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="p-4 rounded-xl bg-slate-800/50 border border-slate-700/50 space-y-2">
+                            <i data-lucide="terminal" class="w-6 h-6 text-sky-400"></i>
+                            <h4 class="font-semibold text-white text-sm">Basic Programming</h4>
+                            <p class="text-xs text-slate-400">Dasar Pemrograman Web & Logika Komputer</p>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-slate-800/50 border border-slate-700/50 space-y-2">
+                            <i data-lucide="video" class="w-6 h-6 text-purple-400"></i>
+                            <h4 class="font-semibold text-white text-sm">Video Editing</h4>
+                            <p class="text-xs text-slate-400">Content Creation & Visual Storytelling</p>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-slate-800/50 border border-slate-700/50 space-y-2">
+                            <i data-lucide="camera" class="w-6 h-6 text-emerald-400"></i>
+                            <h4 class="font-semibold text-white text-sm">Photography</h4>
+                            <p class="text-xs text-slate-400">Dokumentasi Acara & Fotografi</p>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-slate-800/50 border border-slate-700/50 space-y-2">
+                            <i data-lucide="file-text" class="w-6 h-6 text-amber-400"></i>
+                            <h4 class="font-semibold text-white text-sm">Microsoft Office</h4>
+                            <p class="text-xs text-slate-400">Word, Excel, PowerPoint & Administrative Tools</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontak & Form -->
+        <section id="kontak" class="space-y-10 pb-20">
+            <div class="glass-card rounded-3xl p-6 sm:p-10 border border-sky-500/20 relative overflow-hidden">
+                <div class="grid lg:grid-cols-12 gap-10 items-center">
+                    
+                    <div class="lg:col-span-5 space-y-6">
+                        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">
+                            Mari <span class="text-gradient">Berdiskusi</span> & Bekerja Sama
+                        </h2>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Tertarik untuk berkolaborasi dalam proyek, acara, ataupun diskusi teknologi? Jangan ragu untuk menghubungi saya!
+                        </p>
+
+                        <div class="space-y-3 pt-2">
+                            <a href="https://wa.me/62881036176052" target="_blank" class="flex items-center gap-3 p-3 rounded-xl bg-slate-800/60 hover:bg-emerald-950/30 hover:border-emerald-500/50 border border-slate-700/60 transition group">
+                                <div class="p-2.5 rounded-lg bg-emerald-500/10 text-emerald-400">
+                                    <i data-lucide="message-square" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-400">WhatsApp</p>
+                                    <p class="text-sm font-semibold text-white group-hover:text-emerald-300">+62 881 0361 76052</p>
+                                </div>
+                            </a>
+
+                            <a href="mailto:daffa.fairuzz2008@gmail.com" class="flex items-center gap-3 p-3 rounded-xl bg-slate-800/60 hover:bg-sky-950/30 hover:border-sky-500/50 border border-slate-700/60 transition group">
+                                <div class="p-2.5 rounded-lg bg-sky-500/10 text-sky-400">
+                                    <i data-lucide="mail" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-400">Email Utama</p>
+                                    <p class="text-sm font-semibold text-white group-hover:text-sky-300">daffa.fairuzz2008@gmail.com</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Message Form -->
+                    <div class="lg:col-span-7 bg-slate-900/80 p-6 sm:p-8 rounded-2xl border border-slate-800">
+                        <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-slate-400 mb-1">Nama Anda</label>
+                                <input type="text" required placeholder="Masukkan nama..." class="w-full px-4 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white text-sm focus:outline-none focus:border-sky-500 transition">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-slate-400 mb-1">Email / WhatsApp</label>
+                                <input type="text" required placeholder="Alamat email atau nomor HP..." class="w-full px-4 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white text-sm focus:outline-none focus:border-sky-500 transition">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-slate-400 mb-1">Pesan</label>
+                                <textarea rows="3" required placeholder="Tuliskan pesan atau penawaran kerja sama..." class="w-full px-4 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white text-sm focus:outline-none focus:border-sky-500 transition"></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-sm transition shadow-lg shadow-sky-500/25 flex items-center justify-center gap-2">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                                <span>Kirim Pesan</span>
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-slate-950/80 py-8 text-center text-xs text-slate-500 space-y-2">
+        <p>© 2026 Daffa Fairuz Syifaur Anam. All rights reserved.</p>
+        <p>Teknik Informatika — Universitas Negeri Surabaya (UNESA)</p>
+    </footer>
+
+    <!-- Toast Notification Element -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 ease-in-out glass-card border border-sky-500/50 text-white px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3">
+        <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400"></i>
+        <span id="toast-message" class="text-sm font-medium">Notifikasi</span>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Copy Clipboard Function
+        function copyToClipboard(text, message) {
+            const tempInput = document.createElement('input');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            showToast(message);
+        }
+
+        // Toast Notification System
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toast-message');
+            toastMessage.textContent = message;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        // Filter Experience Logic
+        function filterExperience(type) {
+            const cards = document.querySelectorAll('.exp-card');
+            const buttons = document.querySelectorAll('.exp-filter-btn');
+
+            buttons.forEach(btn => {
+                btn.className = 'exp-filter-btn px-4 py-2 rounded-xl glass-card text-slate-300 hover:text-white transition';
+            });
+
+            const activeBtn = document.getElementById(`filter-${type}`);
+            if (activeBtn) {
+                activeBtn.className = 'exp-filter-btn px-4 py-2 rounded-xl bg-sky-500 text-slate-950 font-semibold transition';
+            }
+
+            cards.forEach(card => {
+                if (type === 'all') {
+                    card.style.display = 'block';
+                } else if (card.classList.contains(`item-${type}`)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Dummy Form Submission Handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            showToast('Terima kasih! Pesan Anda berhasil dikirim.');
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>
